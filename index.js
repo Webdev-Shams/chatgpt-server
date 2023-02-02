@@ -3,6 +3,7 @@ import cors from 'cors'
 import bodyParser from 'body-parser'
 import env from 'dotenv'
 import {Configuration, OpenAIApi} from 'openai'
+const port = process.env.PORT || 5000;
 
 const app = express()
 
@@ -21,7 +22,7 @@ const openai = new OpenAIApi(configuration)
 
 
 // listeninng
-app.listen("3080", ()=>console.log("listening on port 3080"))
+app.listen(port, ()=>console.log("listening on port 3080"))
 
 
 // dummy route to test
